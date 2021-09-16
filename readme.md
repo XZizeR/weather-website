@@ -51,3 +51,12 @@ to commit all:
 ```sh 
 git add .
 ```
+
+to check ssh key
+ls -a -l ~/.shh
+to create SSH key
+ssh-keygen -t rsa -b 4096 -C "xzizer@gmail.com"
+
+eval "$(ssh-agent -s)"
+to register the file:
+ssh-add ~/.ssh/id_rsa
