@@ -18,23 +18,14 @@ const forecast = (latitude, longitude, callback) => {
     } else {
       callback(
         undefined,
-        // response.body.location.name +
-        //   ": " +
-        //   response.body.location.lat +
-        //   ", " +
-        //   response.body.location.lon +
-        //   " : " +
         body.current.weather_descriptions[0] +
-          " It is currently " +
+          ". It is currently " +
           body.current.temperature +
           " degrees out. It feels like " +
           body.current.feelslike +
-          " degrees out."
-        // {
-        //   weatherDesc: body.current.weather_descriptions[0],
-        //   temperature: body.current.temperature,
-        //   feelsLike: body.current.feelslike,
-        // }
+          " degrees out. The humidity is " +
+          body.current.humidity +
+          "%."
       );
     }
   });
